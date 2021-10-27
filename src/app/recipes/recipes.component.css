@@ -1,0 +1,15 @@
+#container {
+  display: flex;
+}
+
+.component {
+  flex: 1
+}
+
+#recipe-list {
+  margin-right: 1rem;
+}
+
+#recipe-item {
+  margin-left: 1rem;
+}
