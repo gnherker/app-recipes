@@ -1,0 +1,19 @@
+.recipeItemContainer {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.recipeItemContent {
+}
+
+.recipeName {
+  font-weight: bold;
+}
+.image {
+  max-height: 200px
+}

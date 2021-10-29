@@ -1,13 +1,6 @@
 
-<div>
-  <div *ngFor="let recipe of recipes; let ind=index" class="recipeItemContainer" (click)="onClickRecipe(recipe, ind)">
-    <div class="recipeItemContent">
-      <div class="recipeName">{{ recipe.name }}</div>
-      <div>{{ recipe.description }}</div>
-    </div>
-    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="image" />
-  </div>
-
-  <app-recipe-item></app-recipe-item>
-
-</div>
+<app-recipe-item
+  *ngFor="let recipeEl of recipes; let ind=index"
+  [recipe]="recipeEl"
+  [ind]="ind"
+	(selectedRecipe)="onRecipeSelected(recipeEl)"></app-recipe-item>
