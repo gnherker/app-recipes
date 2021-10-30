@@ -6,9 +6,10 @@
 
 <div id="container">
   <div class="component" id="recipe-list">
-    <app-recipe-list (recipeSelected)="onRecipeSelected($event)"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
   <div class="component" id="recipe-detail">
-    <app-recipe-detail [selectedRecipe]="selectedRecipe"></app-recipe-detail>
+    <app-recipe-detail *ngIf="recipeSelected.name !== ''; else elseBlock" [recipeSelected]="recipeSelected"></app-recipe-detail>
+    <ng-template #elseBlock>there is no recipe selected!</ng-template>
   </div>
 </div>

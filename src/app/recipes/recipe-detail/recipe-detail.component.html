@@ -1,4 +1,23 @@
 <div>
-  <h1>{{ selectedRecipe.name }}</h1>
-  <h2>{{ selectedRecipe.description }}</h2>
+  <div class="button-group" appDropdown>
+    <button
+      type="button">Manage Recipe <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a (click)="sendToShopping()">To Shopping List</a></li>
+      <li><a href="#">Edit Recipe</a></li>
+      <li><a href="#">Delete Recipe</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="recipeDetails">
+  <h1>{{ recipeSelected.name }}</h1>
+  <h2>{{ recipeSelected.description }}</h2>
+
+  <div>
+    <div>Ingredients:</div>
+    <ul>
+      <li *ngFor="let ing of recipeSelected.ingredients">{{ ing.name }}: ({{ ing.amount }})</li>
+    </ul>
+  </div>
 </div>
