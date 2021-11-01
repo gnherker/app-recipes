@@ -10,7 +10,7 @@ import { RecipeService } from '../recipe.service';
 })
 
 export class RecipeDetailComponent implements OnInit {
-	recipeSelected: Recipe = new Recipe('', '', '', []);
+	recipeSelected: Recipe;
 
   constructor(private recipeService: RecipeService,
               private route: ActivatedRoute) { }
