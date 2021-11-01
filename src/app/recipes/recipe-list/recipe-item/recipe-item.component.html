@@ -1,4 +1,4 @@
-<div class="recipeItemContainer" (click)="onClickRecipe()">
+<div class="recipeItemContainer" [routerLink]="[ind]" routerLinkActive="active">
   <div class="recipeItemContent">
     <div class="recipeName">{{ recipe.name }}</div>
     <div>{{ recipe.description }}</div>

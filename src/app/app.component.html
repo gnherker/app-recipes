@@ -1,8 +1,5 @@
-<app-header (navigateTo)="onChangeNavigation($event)"></app-header>
+<app-header></app-header>
 
-<div class='container' *ngIf="page === 'recipes'">
-  <app-recipes></app-recipes>
-</div>
-<div class="container" *ngIf="page === 'shopping'">
-  <app-shopping-list></app-shopping-list>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
